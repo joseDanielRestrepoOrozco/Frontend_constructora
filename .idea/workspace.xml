@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09ba3c9-503d-45d0-afe9-8da9c38d5fdf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/clientes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/constructoras.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/personal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/proyectos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/subcontratistas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/personal_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Frontend_construra.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Frontend_construra.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/contrato_modal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/material.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/clientes_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/constructoras_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/contratos_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/material_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/proyectos_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/subcontratistas_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/clientes.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/clientes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/constructoras.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/constructoras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contratos.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contratos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/personal.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/personal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/proyectos.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/proyectos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/subcontratistas.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/subcontratistas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/personal_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/personal_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
