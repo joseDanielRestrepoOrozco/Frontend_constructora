@@ -13,3 +13,7 @@ def store(data):
 def show(id):
     response = requests.get(f"{st.secrets["base_url"]}/api/cliente/{id}")
     return response.json()
+
+def delete(id):
+    response = requests.delete(f"{st.secrets["base_url"]}/api/cliente/{id}")
+    return response.json()

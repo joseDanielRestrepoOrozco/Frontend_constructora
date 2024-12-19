@@ -12,10 +12,24 @@ col1, col2 = st.columns([2, 1])
 
 with col1:
     st.subheader("Registros")
-    st.dataframe(df)
+    
+    # Añadir una columna de checkbox para seleccionar filas a eliminar
+    df['Eliminar'] = False
+    
+    # Usar st.data_editor en lugar de st.dataframe
+    edited_df = st.data_editor(df)
+    
+    # Botón para eliminar las filas seleccionadas
+    if st.button('Eliminar seleccionados'):
+        rows_to_delete = edited_df[edited_df['Eliminar']].index.tolist()
+        for row_id in rows_to_delete:
+            cs.delete(row_id)  
+        st.success('Registros eliminados exitosamente')
+        cs.get_all.clear()
+        st.rerun()
 
 with col2:
-    # Formulario para ingresar nuevos registros
+    # El resto de tu código para agregar nuevos clientes permanece igual
     st.subheader("Agregar nuevo Cliente")
     with st.form("nuevo_cliente"):
         nombre = st.text_input("Nombre")
