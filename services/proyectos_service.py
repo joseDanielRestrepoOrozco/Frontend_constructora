@@ -9,3 +9,7 @@ def get_all():
 def store(data):
     response = requests.post(f"{st.secrets["base_url"]}/api/proyecto", json=data)
     return response.json()
+
+def show(id):
+    response = requests.get(f"{st.secrets["base_url"]}/api/proyecto/{id}")
+    return response.json()
