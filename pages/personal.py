@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import services.personal_service as ps
+import services.vinculacion_service as vs  # Importar el nuevo servicio
 
 # Configurar la página para usar un diseño más amplio
 st.set_page_config(layout="wide")
@@ -28,7 +29,6 @@ with col1:
         use_container_width=True
     )
 
-
 with col2:
     # Formulario para ingresar nuevos registros
     st.subheader("Agregar nuevo registro")
@@ -50,3 +50,21 @@ with col2:
                 st.rerun()
             else:
                 st.error("Por favor, complete todos los campos. Las horas trabajadas deben ser mayores que 0.")
+
+    # Nuevo formulario para vincular un proyecto a un miembro del personal
+    st.subheader("Vincular proyecto a personal")
+    with st.form("vincular_proyecto"):
+        proyecto_id = st.text_input("ID del Proyecto")
+        personal_id = st.text_input("ID del Personal")
+
+        submitted_proyecto = st.form_submit_button("Vincular")
+        if submitted_proyecto:
+                try:
+                    data = {
+                        "proyecto_id": proyecto_id,
+                        "personal_id": personal_id,
+                    }
+                    vs.vincular_proyecto_personal(data)  # Llamar al servicio de vinculación
+                    st.success("Proyecto vinculado correctamente.")
+                except Exception as e:
+                    st.error(f"Error al vincular proyecto: {e}")
