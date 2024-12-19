@@ -47,7 +47,7 @@ with col_form:
         estado = st.text_input("Estado")
 
         # Dropdown para seleccionar proyecto
-        proyecto_options = {p["_nombre"]: p["id"] for p in proyectos}
+        proyecto_options = {p["_nombre"]: p["_id"] for p in proyectos}
         proyecto_select = st.selectbox("Seleccione un proyecto",
                                 options=list(proyecto_options.keys()),
                                 format_func=lambda x: x)
