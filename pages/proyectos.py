@@ -9,8 +9,18 @@ st.set_page_config(layout="wide")
 st.header('Proyectos')
 
 data = ps.get_all()
+print(data)
 df = pd.DataFrame(data)
-df.set_index("id", inplace=True)
+# df.set_index("id", inplace=True)
+print(df.columns)
+
+# Renombrar las columnas para eliminar el guion bajo al principio
+df.rename(columns=lambda x: x.lstrip('_'), inplace=True)
+print(df.columns) 
+
+# Eliminar las columnas no deseadas
+columns_to_drop = ['materiales', 'subcontratistas', 'personal_asignado']  # Añade aquí las columnas que deseas eliminar
+df.drop(columns=columns_to_drop, inplace=True)
 
 col1, col2 = st.columns([2, 1])  # Ajusta las proporciones de las columnas
 
